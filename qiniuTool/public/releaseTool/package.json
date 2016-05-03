@@ -1,0 +1,31 @@
+{
+  "name": "release-tool",
+  "version": "0.0.1",
+  "description": "release-tool",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git"
+  },
+  "keywords": "",
+  "author": "weivea",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.33",
+    "babel-loader": "^5.3.3",
+    "babel-runtime": "^5.8.29",
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "vue": "^1.0.8",
+    "vue-loader": "^6.0.3",
+    "webpack": "^1.11.0",
+    "vue-router": "^0.7.6",
+    "good-listener": "^1.1.6",
+    "select": "^1.0.6",
+    "tiny-emitter": "^1.0.0"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^0.9.1",
+    "jquery": "^2.1.4"
+  }
+}

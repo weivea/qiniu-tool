@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第三方接口测试</title>
+
+    <!--<link rel="stylesheet" href="/releaseTool/build/styles.css">-->
+</head>
+<body>
+<div id="app">
+    这是第三上传接口测试
+    <button class="startUpload">点我</button>
+
+
+
+</div>
+
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script src="/js/cloudUpload.js"></script>
+<script>
+
+    $(function () {
+        var cloudUpload = $.fn.cloudUploader({
+            askUrl:'/api/getUpToken',
+            accept:'image/*',//允许文件类型
+            multiple:true,//是否允许多个文件
+            onOneSuccess:onOneSuccessOp
+        });
+        $(".startUpload").click(function(){
+            cloudUpload.start();
+        });
+
+        function onOneSuccessOp(info){//当一个文件上传成功后的回调
+            console.log(info);
+        }
+    });
+
+    /**
+     * /api/getUpToken接口协议
+     *
+     * 请求参数：post方法
+     * {
+            'fun': 'getToken',
+            'fileName': fileName
+        }
+     *
+     * 返回参数：
+     * {
+     * err:0    //0表示成功，其它表示失败
+     * msg:信息
+     * token:上传的token
+     * key:上传的key
+     * }
+     *
+     *
+     * */
+
+</script>
+
+</body>
+</html>
